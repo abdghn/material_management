@@ -1,0 +1,7 @@
+<!-- material_management/security/security.xml -->
+<odoo>
+    <record id="material_group_user" model="res.groups">
+        <field name="name">Material Management User</field>
+        <field name="category_id" ref="base.module_category_inventory"/>
+    </record>
+</odoo>

@@ -1,0 +1,47 @@
+<!-- material_management/views/material_views.xml -->
+<odoo>
+    <!-- Tree View untuk Material -->
+    <record id="view_material_tree" model="ir.ui.view">
+        <field name="name">material.tree</field>
+        <field name="model">material</field>
+        <field name="arch" type="xml">
+            <tree string="Materials">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="material_type"/>
+                <field name="buy_price"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View untuk Material -->
+    <record id="view_material_form" model="ir.ui.view">
+        <field name="name">material.form</field>
+        <field name="model">material</field>
+        <field name="arch" type="xml">
+            <form string="Material Form">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="material_type"/>
+                        <field name="buy_price"/>
+                        <field name="supplier_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action untuk Material -->
+    <record id="action_material" model="ir.actions.act_window">
+        <field name="name">Materials</field>
+        <field name="res_model">material</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu untuk Material Management -->
+    <menuitem id="menu_material_root" name="Material Management" sequence="10"/>
+    <menuitem id="menu_material" name="Materials" parent="menu_material_root" action="material_management.action_material"/>
+</odoo>

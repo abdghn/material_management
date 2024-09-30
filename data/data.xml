@@ -1,0 +1,15 @@
+<!-- material_management/data/data.xml -->
+<odoo>
+    <record id="supplier_1" model="res.partner">
+        <field name="name">Supplier A</field>
+        <field name="supplier_rank">1</field>
+    </record>
+
+    <record id="material_1" model="material">
+        <field name="code">MAT001</field>
+        <field name="name">Fabric A</field>
+        <field name="material_type">fabric</field>
+        <field name="buy_price">150</field>
+        <field name="supplier_id" ref="supplier_1"/>
+    </record>
+</odoo>
